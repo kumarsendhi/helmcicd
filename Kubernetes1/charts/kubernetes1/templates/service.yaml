@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "kubernetes1.fullname" . }}
+  name: {{ include "kubernetes1.fullname" . }}
   labels:
-    app: {{ template "kubernetes1.name" . }}
-    chart: {{ template "kubernetes1.chart" . }}
+    app: {{ include "kubernetes1.name" . }}
+    chart: {{ include "kubernetes1.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ template "kubernetes1.name" . }}
+    app: {{ include "kubernetes1.name" . }}
     release: {{ .Release.Name }}
