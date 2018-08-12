@@ -4,11 +4,11 @@ EXPOSE 80
 
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
-COPY ["Kubernetes1/Kubernetes1.csproj", "Kubernetes1/"]
+COPY ["Kubernetes1.csproj", "Kubernetes1/"]
 
 RUN dotnet restore "$PROJECT_DIR/Kubernetes1.csproj"
 COPY . .
-WORKDIR "/src/Kubernetes1"
+WORKDIR "/src"
 RUN dotnet build "Kubernetes1.csproj" -c Release -o /app
 
 FROM build AS publish
