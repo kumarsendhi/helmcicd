@@ -1,20 +1,15 @@
 FROM microsoft/aspnetcore:2.0 AS base
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.0 AS build
-WORKDIR /src
-COPY ["Kubernetes1.csproj", "Kubernetes1/"]
+COPY *.csproj ./
 
-RUN dotnet restore "Kubernetes1/Kubernetes1.csproj"
-COPY . .
+RUN dotnet restore 
+COPY . ./
 WORKDIR "/src"
-RUN dotnet build "Kubernetes1.csproj" -c Release -o /app
 
-FROM build AS publish
-RUN dotnet publish "Kubernetes1.csproj" -c Release -o /app
+RUN dotnet publish  -c Release -o out
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
+COPY  --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "Kubernetes1.dll"]
