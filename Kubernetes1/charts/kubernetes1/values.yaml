@@ -4,7 +4,7 @@
 fullnameOverride: kubernetes1
 replicaCount: 1
 image:
-  repository: kumarsendhi/helmcicd
+  repository: seyonkubernetesregistry.azurecr.io/kumarsendhi/helmcicd
   tag: latest
   pullPolicy: IfNotPresent
 imagePullSecrets: 
