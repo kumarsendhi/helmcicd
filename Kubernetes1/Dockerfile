@@ -1,6 +1,8 @@
 FROM microsoft/aspnetcore:2.0 AS base
 WORKDIR /app
 
+FROM microsoft/aspnetcore-build:2.0 AS build
+WORKDIR /src
 COPY ["*.csproj", "/"]
 
 RUN dotnet restore "/*.csproj"
