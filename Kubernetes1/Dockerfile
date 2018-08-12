@@ -1,9 +1,9 @@
 FROM microsoft/aspnetcore:2.0 AS base
 WORKDIR /app
 
-COPY *.csproj ./
+COPY ["*.csproj", "./"]
 
-RUN dotnet restore
+RUN dotnet restore "./*.csproj"
 
 COPY . ./
 
