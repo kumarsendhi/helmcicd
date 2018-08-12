@@ -1,0 +1,10 @@
+C:\kubernetes\Kubernetes1\Kubernetes1\bin\Release\netcoreapp2.0\Kubernetes1.deps.json
+C:\kubernetes\Kubernetes1\Kubernetes1\bin\Release\netcoreapp2.0\Kubernetes1.runtimeconfig.json
+C:\kubernetes\Kubernetes1\Kubernetes1\bin\Release\netcoreapp2.0\Kubernetes1.runtimeconfig.dev.json
+C:\kubernetes\Kubernetes1\Kubernetes1\bin\Release\netcoreapp2.0\Kubernetes1.dll
+C:\kubernetes\Kubernetes1\Kubernetes1\bin\Release\netcoreapp2.0\Kubernetes1.pdb
+C:\kubernetes\Kubernetes1\Kubernetes1\obj\Release\netcoreapp2.0\Kubernetes1.csproj.CoreCompileInputs.cache
+C:\kubernetes\Kubernetes1\Kubernetes1\obj\Release\netcoreapp2.0\Kubernetes1.AssemblyInfoInputs.cache
+C:\kubernetes\Kubernetes1\Kubernetes1\obj\Release\netcoreapp2.0\Kubernetes1.AssemblyInfo.cs
+C:\kubernetes\Kubernetes1\Kubernetes1\obj\Release\netcoreapp2.0\Kubernetes1.dll
+C:\kubernetes\Kubernetes1\Kubernetes1\obj\Release\netcoreapp2.0\Kubernetes1.pdb
