@@ -4,8 +4,8 @@
 fullnameOverride: kubernetes1
 replicaCount: 1
 image:
-  repository: kubernetes1
-  tag: stable
+  repository: kumarsendhi/helmcicd
+  tag: latest
   pullPolicy: IfNotPresent
 imagePullSecrets: 
   # Optionally specify an array of imagePullSecrets.
@@ -13,7 +13,7 @@ imagePullSecrets:
   # ref: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
   #
   # This uses credentials from secret "myRegistryKeySecretName".
-   - name: seyon1234
+   - name: seyon123
 service:
   type: LoadBalancer
   port: 80
