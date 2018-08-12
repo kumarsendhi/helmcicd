@@ -7,7 +7,7 @@ image:
   repository: kubernetes1
   tag: stable
   pullPolicy: IfNotPresent
-imagePullSecrets: []
+imagePullSecrets: 
   # Optionally specify an array of imagePullSecrets.
   # Secrets must be manually created in the namespace.
   # ref: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
