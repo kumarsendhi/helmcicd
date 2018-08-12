@@ -1,10 +1,10 @@
 kapiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: {{ include "kubernetes1.fullname" . }}
+  name: {{ template "kubernetes1.fullname" . }}
   labels:
-    app: {{ include "kubernetes1.name" . }}
-    chart: {{ include "kubernetes1.chart" . }}
+    app: {{ template "kubernetes1.name" . }}
+    chart: {{ template "kubernetes1.chart" . }}
     draft: {{ default "draft-app" .Values.draft }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
@@ -12,12 +12,12 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "kubernetes1.name" . }}
+      app: {{ template "kubernetes1.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ include "kubernetes1.name" . }}
+        app: {{ template "kubernetes1.name" . }}
         draft: {{ default "draft-app" .Values.draft }}
         release: {{ .Release.Name }}
       annotations:
