@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY *.csproj ./
 
-RUN dotnet restore /*.csproj
+RUN dotnet restore "./*.csproj"
 COPY . ./
 WORKDIR "/src"
 
