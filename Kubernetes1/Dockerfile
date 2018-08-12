@@ -6,7 +6,7 @@ FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
 COPY ["Kubernetes1.csproj", "Kubernetes1/"]
 
-RUN dotnet restore "$PROJECT_DIR/Kubernetes1.csproj"
+RUN dotnet restore "Kubernetes1/Kubernetes1.csproj"
 COPY . .
 WORKDIR "/src"
 RUN dotnet build "Kubernetes1.csproj" -c Release -o /app
