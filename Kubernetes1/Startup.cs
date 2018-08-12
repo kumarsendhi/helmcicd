@@ -27,7 +27,7 @@ namespace Kubernetes1
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World! Kumar");
+                await context.Response.WriteAsync("Hello World! Kumar we are close to winning");
             });
         }
     }
